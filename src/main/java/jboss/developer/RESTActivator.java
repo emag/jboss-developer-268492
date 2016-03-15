@@ -12,8 +12,14 @@ public class RESTActivator extends Application {
   private Set<Class<?>> empty = new HashSet<>();
 
   public RESTActivator() {
-    singletons.add(new FirstBean());
-//    singletons.add(new SecondBean());
+    boolean useSecond = Boolean.parseBoolean(System.getProperty("use.second", "false"));
+
+    if (useSecond) {
+      singletons.add(new SecondBean());
+    } else {
+      singletons.add(new FirstBean());
+    }
+
   }
 
   @Override
