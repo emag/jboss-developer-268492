@@ -50,7 +50,7 @@
     <plugins>
       <!--
         if you interested in WildFly Swarm,
-        Uncomment this and do `mvn wildfly-swarm` !
+        Uncomment this and do `mvn wildfly-swarm:run` !
         Access http://localhost:8080/myrest/greeting
         And See http://wildfly-swarm.io/
        -->
